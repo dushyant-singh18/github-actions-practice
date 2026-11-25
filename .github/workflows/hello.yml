@@ -1,0 +1,14 @@
+name: Hello-workflow
+
+on: push
+
+jobs:
+  greet:
+   runs-on: ubuntu-latest
+
+   steps:
+     - name: chackout code
+       uses: actions/checkout@v7
+
+     - name: print hello msg
+       run: echo "Hello from GitHub Actions!"

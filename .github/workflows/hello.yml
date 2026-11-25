@@ -20,6 +20,9 @@ jobs:
        run: echo " branch name is ${{ github.ref_name }}"
 
      - name: List the files in the repo
-       run: ls -
+       run: ls -la
      - name: Print the runners operating system
        run: echo "Operating System is $RUNNER_OS"
+
+     - name: Intentionally Fail Workflow
+       run: exit 1

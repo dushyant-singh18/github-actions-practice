@@ -25,4 +25,4 @@ jobs:
        run: echo "Operating System is $RUNNER_OS"
 
      - name: Intentionally Fail Workflow
-       run: exit 1
+       run: exit 0

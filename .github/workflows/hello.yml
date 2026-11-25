@@ -12,3 +12,6 @@ jobs:
 
      - name: print hello msg
        run: echo "Hello from GitHub Actions!"
+
+     - name: current date
+       run: echo "date"

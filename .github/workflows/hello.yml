@@ -1,0 +1,28 @@
+name: Hello-workflow
+
+on: push
+
+jobs:
+  greet:
+   runs-on: ubuntu-latest
+
+   steps:
+     - name: chackout code
+       uses: actions/checkout@v7
+
+     - name: print hello msg
+       run: echo "Hello from GitHub Actions!"
+
+     - name: current date
+       run: date
+
+     - name: Print the name of the branch
+       run: echo " branch name is ${{ github.ref_name }}"
+
+     - name: List the files in the repo
+       run: ls -la
+     - name: Print the runners operating system
+       run: echo "Operating System is $RUNNER_OS"
+
+     - name: Intentionally Fail Workflow
+       run: exit 0
